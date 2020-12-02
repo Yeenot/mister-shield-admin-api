@@ -1,0 +1,216 @@
+FORMAT: 1A
+
+# mister-shield-api
+
+## Get Country [/api/v1/countries]  
+
+### List of countries  [GET]
+
++ Response 200 (application/json)
+
+        {
+            "data": [
+                {
+                    "id": 1,
+                    "code": "AF",
+                    "name": "Afghanistan",
+                    "status": "disabled",
+                    "area_unit": "sqm",
+                    "has_states": null,
+                    "has_cities": null,
+                    "has_districts": null,
+                    "has_zip": null
+                },
+                {
+                    "id": 2,
+                    "code": "AX",
+                    "name": "Åland Islands",
+                    "status": "disabled",
+                    "area_unit": "sqm",
+                    "has_states": 0,
+                    "has_cities": 0,
+                    "has_districts": 1,
+                    "has_zip": 0
+                },
+                {
+                    "id": 3,
+                    "code": "AL",
+                    "name": "Albania",
+                    "status": "draft",
+                    "area_unit": "sqm",
+                    "has_states": 1,
+                    "has_cities": 1,
+                    "has_districts": 0,
+                    "has_zip": 1
+                }
+            ]
+        }
+
+
+## Get country by identifier [/api/v1/countries/{country}]  
+
++ Parameters
+
+    + country: 3 (integer) - A unique identifier of a country.
+
+### Retrieve a country  [GET]
+
++ Response 200 (application/json)
+
+        {
+            "data": {
+                "id": 3,
+                "code": "AL",
+                "name": "Albania",
+                "status": "draft",
+                "area_unit": "sqm",
+                "has_states": 1,
+                "has_cities": 1,
+                "has_districts": 0,
+                "has_zip": 1
+            }
+        }
+
+
+## Get country by code [/api/v1/countries/code/{code}]  
+
++ Parameters
+
+    + code: AL (string) - A code of a country.
+
+### Retrieve a country  [GET]
+
++ Response 200 (application/json)
+
+        {
+            "data": {
+                "id": 3,
+                "code": "AL",
+                "name": "Albania",
+                "status": "draft",
+                "area_unit": "sqm",
+                "has_states": 1,
+                "has_cities": 1,
+                "has_districts": 0,
+                "has_zip": 1
+            }
+        }
+        
+## Get Language [/api/v1/languages]  
+
+### List of languages  [GET]
+
++ Response 200 (application/json)
+
+        {
+            "data": [
+                {
+                    "id": 1,
+                    "code": "ab",
+                    "name": "аҧсуа бызшәа, аҧсшәа",
+                    "english_name": "Abkhazian",
+                    "status_public": "disabled",
+                    "status_staff": "disabled",
+                    "created_at": "2019-10-02T16:22:42.000000Z",
+                    "updated_at": null
+                },
+                {
+                    "id": 2,
+                    "code": "aa",
+                    "name": "Afaraf",
+                    "english_name": "Afar",
+                    "status_public": "disabled",
+                    "status_staff": "disabled",
+                    "created_at": "2019-10-02T16:22:42.000000Z",
+                    "updated_at": null
+                },
+                {
+                    "id": 3,
+                    "code": "af",
+                    "name": "Afrikaans",
+                    "english_name": "Afrikaans",
+                    "status_public": "disabled",
+                    "status_staff": "disabled",
+                    "created_at": "2019-10-02T16:22:42.000000Z",
+                    "updated_at": null
+                }
+            ]
+        }
+
+
+## Get language by identifier [/api/v1/languages/{language}]  
+
++ Parameters
+
+    + language: 1 (integer) - A unique identifier of a language.
+
+### Retrieve a language  [GET]
+
++ Response 200 (application/json)
+
+        {
+            "data": {
+                "id": 1,
+                "code": "ab",
+                "name": "аҧсуа бызшәа, аҧсшәа",
+                "english_name": "Abkhazian",
+                "status_public": "disabled",
+                "status_staff": "disabled",
+                "created_at": "2019-10-02T16:22:42.000000Z",
+                "updated_at": null
+            }
+        }
+
+
+## Get language by code [/api/v1/languages/code/{code}]  
+
++ Parameters
+
+    + code: ab (string) - A code of a language.
+
+### Retrieve a language  [GET]
+
++ Response 200 (application/json)
+
+        {
+            "data": {
+                "id": 1,
+                "code": "ab",
+                "name": "аҧсуа бызшәа, аҧсшәа",
+                "english_name": "Abkhazian",
+                "status_public": "disabled",
+                "status_staff": "disabled",
+                "created_at": "2019-10-02T16:22:42.000000Z",
+                "updated_at": null
+            }
+        }
+
+
+## Get company by country [/api/v1/countries/{country}/company]  
+
++ Parameters
+
+    + country: 226 (integer) - A unique identifier of a country.
+
+### Retrieve a language  [GET]
+
++ Response 200 (application/json)
+
+        {
+            "data": {
+                "name": "Mister Shield Services Co.,Ltd",
+                "country_id": 226,
+                "reg_number": null,
+                "website": "www.mistershield.com",
+                "facebook": "https://www.facebook.com",
+                "instagram": "https://www.instagram.com",
+                "youtube": "https://www.youtube.com",
+                "linkedin": "https://www.linkedin.com",
+                "phone": "+66800781817",
+                "whatsapp": "+66800780000",
+                "line": "mistershield.thaa",
+                "facebook_username": "/mistershield.th",
+                "customer_service_phone": "080 078 1817",
+                "customer_service_email": "help@mistershield.com"
+            }
+        }
