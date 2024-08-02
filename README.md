@@ -1,4 +1,10 @@
-## Installation
+# Mister Shield
+Booking-appointment system 
+
+# Project Structure
+Uses services pattern under ***app/Services***
+
+# Installation
 
 - Copy ***.env.example*** to ***.env*** and fill the correct details.
 - Run ***composer install***.
